@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English 3 - Final Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>ĐỀ KIỂM TRA CUỐI KÌ 2 – ĐỀ 1</h1>
+    <p>English 3 – Global Success</p>
+    <p>Online Test</p>
+  </div>
+
+  <form id="testForm">
+    <div class="card">
+      <h2>Student information</h2>
+      <div class="grid">
+        <div><label>Full name<input id="studentName" type="text" required placeholder="Enter your full name"></label></div>
+        <div><label>Class<input id="studentClass" type="text" required placeholder="Enter your class"></label></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>A. LISTENING</h2>
+      <div class="section-note">I. Listen and tick.</div>
+      <div class="audio">
+        <strong>🎧 Listening audio</strong>
+        <audio id="audio1" controls preload="metadata">
+          <source src="audio/listening.mp3" type="audio/mpeg">
+          Your browser does not support audio.
+        </audio>
+        <div class="notice">Teacher: put the audio file at <b>audio/listening.mp3</b>.</div>
+      </div>
+      <div id="listenTick"></div>
+
+      <div class="section-note" style="margin-top:22px">II. Listen and write Y (Yes) or N (No).</div>
+      <div id="listenYN"></div>
+    </div>
+
+    <div class="card">
+      <h2>B. READING &amp; WRITING</h2>
+      <div class="section-note">II. Read and tick True (T) or False (F).</div>
+      <div class="reading-passage">
+        <p><strong>Read the passage and tick T or F.</strong></p>
+        <h3>My Family</h3>
+        <p>Hello! My name is Mai. I am eight years old. There are four people in my family. They are my father, my mother, my brother and me. My father is a doctor. My mother is a teacher. My brother is eleven years old. We are a happy family.</p>
+      </div>
+      <div id="readingTF"></div>
+
+      <div class="section-note" style="margin-top:22px">III. Look and write.</div>
+      <div class="q">
+        <div class="q-title">11. There is a ______ in my bedroom.</div>
+        <input type="text" name="w1" placeholder="Your answer" autocomplete="off">
+      </div>
+      <div class="q">
+        <div class="q-title">12. My father is a ______.</div>
+        <input type="text" name="w2" placeholder="Your answer" autocomplete="off">
+      </div>
+      <div class="q">
+        <div class="q-title">13. I have two ______. They are my pets.</div>
+        <input type="text" name="w3" placeholder="Your answer" autocomplete="off">
+      </div>
+      <div class="q">
+        <div class="q-title">14. She is ______ a bike.</div>
+        <input type="text" name="w4" placeholder="Your answer" autocomplete="off">
+      </div>
+      <div class="q">
+        <div class="q-title">15. The monkey is ______ in the tree.</div>
+        <input type="text" name="w5" placeholder="Your answer" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>C. GRAMMAR</h2>
+      <div class="section-note">Choose the correct answer A, B or C.</div>
+      <div id="grammar"></div>
+    </div>
+
+    <div class="card">
+      <h2>D. SPEAKING</h2>
+      <div class="section-note">Part 1. Introduce yourself</div>
+      <div class="q">
+        <div class="q-title">1. What's your name?</div>
+        <input type="text" name="speaking1" placeholder="Your answer">
+      </div>
+      <div class="q">
+        <div class="q-title">2. How old are you?</div>
+        <input type="text" name="speaking2" placeholder="Your answer">
+      </div>
+      <div class="q">
+        <div class="q-title">3. How are you?</div>
+        <input type="text" name="speaking3" placeholder="Your answer">
+      </div>
+
+      <div class="section-note" style="margin-top:22px">Part 2. Answer the questions – 4 points</div>
+      <div class="q">
+        <div class="q-title">1. What's your father's/mother's job?</div>
+        <input type="text" name="speaking4" placeholder="Your answer">
+      </div>
+      <div class="q">
+        <div class="q-title">2. What's your favourite food?</div>
+        <input type="text" name="speaking5" placeholder="Your answer">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="actions">
+        <div class="timer">⏱ <span id="time">30:00</span></div>
+        <button id="submitBtn" type="submit">Submit test</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="card" id="result">
+    <h2>Result</h2>
+    <div class="score" id="score"></div>
+    <p id="resultText"></p>
+    <p id="wrongAnswers"></p>
+  </div>`
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
