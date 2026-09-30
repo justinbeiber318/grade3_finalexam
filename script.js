@@ -39,6 +39,17 @@ const readingTFQuestions = [
 
 const writingAnswers = ["bed", "doctor", "cats", "riding", "climbing"];
 
+function normalizeWritingAnswer(value){
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/[.,!?;:]/g, "")
+    .replace(/\s+/g, " ")
+    .replace(/^a\s+/, "")
+    .replace(/^an\s+/, "")
+    .replace(/^the\s+/, "");
+}
+
 const grammarQuestions = [
   {text:"This is my ______.", options:["A. mother", "B. mothers", "C. mother is"], answer:"A"},
   {text:"He ______ a doctor.", options:["A. am", "B. is", "C. are"], answer:"B"},
@@ -136,8 +147,15 @@ document.getElementById("testForm").addEventListener("submit",e=>{
   const answered=[...writing].filter(x=>x.value.trim()).length;
   writingAnswers.forEach((answer,i)=>{
     total++;
-    const value=document.querySelector(`input[name="w${i+1}"]`).value.trim().toLowerCase();
-    if(value===answer){
+    const rawValue=document.querySelector(`input[name="w${i+1}"]`).value;
+    const value=normalizeWritingAnswer(rawValue);
+    const accepted = new Set([
+      answer,
+      `a ${answer}`,
+      `an ${answer}`,
+      `the ${answer}`
+    ]);
+    if(accepted.has(value)){
       correct++;
     }else{
       wrongAnswers.push(`Writing - Câu ${i+11}: đáp án đúng ${answer}`);
