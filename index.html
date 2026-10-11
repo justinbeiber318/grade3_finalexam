@@ -1,135 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English 3 - Final Test</title>
-<link rel="stylesheet" href="style.css">
+<title>English 7 | Semester 2 Practice Test</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#64748b;--brand:#5b5ce2;--brand2:#8b5cf6;--line:#e2e8f0;--good:#15803d;--bad:#b91c1c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(120deg,#3438a8,#7c3aed);color:#fff;padding:34px 20px 28px}
+.hero{max-width:980px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;opacity:.8}
+h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.15;margin:.55rem 0}.hero p{margin:.5rem 0 0;opacity:.9}
+main{max-width:980px;margin:24px auto;padding:0 16px 50px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:16px}
+.pill{background:#e8eaff;color:#3730a3;padding:7px 12px;border-radius:999px;font-size:.88rem;font-weight:700}
+button{font:inherit;border:0;border-radius:12px;padding:11px 16px;cursor:pointer;font-weight:750;transition:.15s}
+button:hover{transform:translateY(-1px)}.primary{background:var(--brand);color:#fff}.secondary{background:#eef2ff;color:#3730a3}.quiet{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.progress-wrap{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin:12px 0 20px}.progress{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--brand2));transition:width .2s}
+.section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:16px 0;box-shadow:0 6px 22px #17203308}
+.section h2{margin:0 0 5px;font-size:1.2rem}.sub{color:var(--muted);font-size:.92rem;margin:0 0 18px}
+.q{padding:16px 0;border-top:1px solid var(--line)}.q:first-of-type{border-top:0}.q-title{font-weight:700;margin-bottom:10px}.num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#eef2ff;color:#4338ca;margin-right:8px;font-size:.85rem}
+.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px}
+.option{display:flex;align-items:flex-start;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:11px;cursor:pointer;background:#fff}
+.option:hover{border-color:#a5b4fc;background:#fafaff}.option input{margin-top:5px;accent-color:var(--brand)}.option:has(input:checked){border-color:#818cf8;background:#f5f3ff}
+input[type=text]{width:100%;max-width:480px;border:1px solid #cbd5e1;border-radius:10px;padding:11px 12px;font:inherit}
+.passage{background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0;white-space:normal}
+.tf{display:flex;gap:12px;flex-wrap:wrap}.tf label{display:flex;gap:7px;align-items:center}.tf input{accent-color:var(--brand)}
+.feedback{font-size:.9rem;margin-top:7px;font-weight:700}.correct{color:var(--good)}.incorrect{color:var(--bad)}.unanswered{color:#a16207}
+#result{display:none;position:sticky;bottom:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 12px 35px #0f172a22;z-index:5;margin-top:20px}
+.score{font-size:1.8rem;font-weight:850;color:#4338ca}.small{color:var(--muted);font-size:.88rem}
+footer{text-align:center;color:var(--muted);padding:20px;font-size:.85rem}
+@media(max-width:600px){.section{padding:16px}.toolbar{align-items:stretch}.toolbar button{flex:1}}
+</style>
 </head>
 <body>
-<div class="container">
-  <div class="hero">
-    <h1>ĐỀ KIỂM TRA CUỐI KÌ 2 – ĐỀ 1</h1>
-    <p>English 3 – Global Success</p>
-    <p>Online Test</p>
-  </div>
-
-  <form id="testForm">
-    <div class="card">
-      <h2>Student information</h2>
-      <div class="grid">
-        <div><label>Full name<input id="studentName" type="text" required placeholder="Enter your full name"></label></div>
-        <div><label>Class<input id="studentClass" type="text" required placeholder="Enter your class"></label></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>A. LISTENING</h2>
-      <div class="section-note">I. Listen and tick.</div>
-      <div class="audio">
-        <strong>🎧 Listening audio</strong>
-        <audio id="audio1" controls preload="metadata">
-          <source src="audio/listening.mp3" type="audio/mpeg">
-          Your browser does not support audio.
-        </audio>
-        <div class="notice">Teacher: put the audio file at <b>audio/listening.mp3</b>.</div>
-      </div>
-      <div id="listenTick"></div>
-
-      <div class="section-note" style="margin-top:22px">II. Listen and write Y (Yes) or N (No).</div>
-      <div class="audio" style="margin: 12px 0 16px;">
-        <strong>🎧 Part II audio</strong>
-        <audio id="audio2" controls preload="metadata">
-          <source src="audio/de-1-2.mp3" type="audio/mpeg">
-          Your browser does not support audio.
-        </audio>
-      </div>
-      <div id="listenYN"></div>
-    </div>
-
-    <div class="card">
-      <h2>B. READING &amp; WRITING</h2>
-      <div class="section-note">II. Read and tick True (T) or False (F).</div>
-      <div class="reading-passage">
-        <p><strong>Read the passage and tick T or F.</strong></p>
-        <h3>My Family</h3>
-        <p>Hello! My name is Mai. I am eight years old. There are four people in my family. They are my father, my mother, my brother and me. My father is a doctor. My mother is a teacher. My brother is eleven years old. We are a happy family.</p>
-      </div>
-      <div id="readingTF"></div>
-
-      <div class="section-note" style="margin-top:22px">III. Look and write.</div>
-      <div class="notice" style="margin-bottom: 12px;">Write only ONE word in each blank.</div>
-      <div class="q">
-        <div class="q-title">11. There is a ______ in my bedroom. I sleep on it.</div>
-        <input type="text" name="w1" placeholder="Your answer" autocomplete="off">
-      </div>
-      <div class="q">
-        <div class="q-title">12. My father is a ______. He works in a hospital.</div>
-        <input type="text" name="w2" placeholder="Your answer" autocomplete="off">
-      </div>
-      <div class="q">
-        <div class="q-title">13. I have two ______. They are my pets. They have whiskers and like milk.</div>
-        <input type="text" name="w3" placeholder="Your answer" autocomplete="off">
-      </div>
-      <div class="q">
-        <div class="q-title">14. She is ______ a bike to school.</div>
-        <input type="text" name="w4" placeholder="Your answer" autocomplete="off">
-      </div>
-      <div class="q">
-        <div class="q-title">15. The monkey is ______ in the tree. It is moving from branch to branch.</div>
-        <input type="text" name="w5" placeholder="Your answer" autocomplete="off">
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>C. GRAMMAR</h2>
-      <div class="section-note">Choose the correct answer A, B or C.</div>
-      <div id="grammar"></div>
-    </div>
-
-    <div class="card">
-      <h2>D. SPEAKING</h2>
-      <div class="section-note">Part 1. Introduce yourself</div>
-      <div class="q">
-        <div class="q-title">1. What's your name?</div>
-        <input type="text" name="speaking1" placeholder="Your answer">
-      </div>
-      <div class="q">
-        <div class="q-title">2. How old are you?</div>
-        <input type="text" name="speaking2" placeholder="Your answer">
-      </div>
-      <div class="q">
-        <div class="q-title">3. How are you?</div>
-        <input type="text" name="speaking3" placeholder="Your answer">
-      </div>
-
-      <div class="section-note" style="margin-top:22px">Part 2. Answer the questions – 4 points</div>
-      <div class="q">
-        <div class="q-title">1. What's your father's/mother's job?</div>
-        <input type="text" name="speaking4" placeholder="Your answer">
-      </div>
-      <div class="q">
-        <div class="q-title">2. What's your favourite food?</div>
-        <input type="text" name="speaking5" placeholder="Your answer">
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="actions">
-        <div class="timer">⏱ <span id="time">30:00</span></div>
-        <button id="submitBtn" type="submit">Submit test</button>
-      </div>
-    </div>
-  </form>
-
-  <div class="card" id="result">
-    <h2>Result</h2>
-    <div class="score" id="score"></div>
-    <p id="resultText"></p>
-    <p id="wrongAnswers"></p>
-  </div>`
-</div>
-
-<script src="script.js"></script>
+<header><div class="hero">
+<div class="eyebrow">GLOBAL SUCCESS · GRADE 7</div>
+<h1>Đề luyện tập học kì II<br>Tiếng Anh 7 — Đề số 2</h1>
+<p>Bài làm trực tuyến · Chọn đáp án, điền từ và kiểm tra kết quả sau khi hoàn thành.</p>
+</div></header>
+<main>
+<div class="toolbar"><span class="pill">40 câu · Thời gian gợi ý: 60 phút</span><div><button class="quiet" id="resetBtn" type="button">Làm lại</button> <button class="secondary" id="reviewBtn" type="button">Xem câu chưa làm</button></div></div>
+<div class="progress-wrap"><div class="progress" id="progress"></div></div>
+<p class="small" id="progressText">Đã hoàn thành 0/40 câu</p>
+<form id="quiz">
+<section class="section"><h2>I. Pronunciation</h2><p class="sub">Choose the word whose underlined part is pronounced differently.</p>
+<div class="q" data-q="1"><div class="q-title"><span class="num">1</span>Choose the word whose underlined part is pronounced differently.</div><div class="options">
+<label class="option"><input type="radio" name="q1" value="A"> A. amazing</label><label class="option"><input type="radio" name="q1" value="B"> B. around</label><label class="option"><input type="radio" name="q1" value="C"> C. against</label><label class="option"><input type="radio" name="q1" value="D"> D. spacious</label></div></div>
+<div class="q" data-q="2"><div class="q-title"><span class="num">2</span>Choose the word whose underlined part is pronounced differently.</div><div class="options">
+<label class="option"><input type="radio" name="q2" value="A"> A. serious</label><label class="option"><input type="radio" name="q2" value="B"> B. question</label><label class="option"><input type="radio" name="q2" value="C"> C. stressful</label><label class="option"><input type="radio" name="q2" value="D"> D. dense</label></div></div>
+</section>
+<section class="section"><h2>II. Stress</h2><p class="sub">Choose the word that has a different stressed syllable from the rest.</p>
+<div class="q" data-q="3"><div class="q-title"><span class="num">3</span>Choose the word with different stress.</div><div class="options"><label class="option"><input type="radio" name="q3" value="A"> A. atmosphere</label><label class="option"><input type="radio" name="q3" value="B"> B. melody</label><label class="option"><input type="radio" name="q3" value="C"> C. carnival</label><label class="option"><input type="radio" name="q3" value="D"> D. recommend</label></div></div>
+<div class="q" data-q="4"><div class="q-title"><span class="num">4</span>Choose the word with different stress.</div><div class="options"><label class="option"><input type="radio" name="q4" value="A"> A. allergy</label><label class="option"><input type="radio" name="q4" value="B"> B. depression</label><label class="option"><input type="radio" name="q4" value="C"> C. unusual</label><label class="option"><input type="radio" name="q4" value="D"> D. performer</label></div></div>
+</section>
+<section class="section"><h2>III. Vocabulary & Grammar</h2><p class="sub">Choose the best option (A, B, C or D).</p>
+<div id="mcq"></div>
+</section>
+<section class="section"><h2>IV. Word forms</h2><p class="sub">Write the correct form of the words in brackets.</p>
+<div class="q" data-q="16"><div class="q-title"><span class="num">16</span>When too many people live in a small place, ______ can become very difficult. (LIVE)</div><input type="text" name="q16" autocomplete="off" placeholder="Your answer"></div>
+<div class="q" data-q="17"><div class="q-title"><span class="num">17</span>He is a ______ student because he goes to class every day. (REGULARLY)</div><input type="text" name="q17" autocomplete="off" placeholder="Your answer"></div>
+<div class="q" data-q="18"><div class="q-title"><span class="num">18</span>Coal will be ______ by another renewable source of energy in the future. (REPLACE)</div><input type="text" name="q18" autocomplete="off" placeholder="Your answer"></div>
+<div class="q" data-q="19"><div class="q-title"><span class="num">19</span>How many ______ are there in the program tonight? (PERFORM)</div><input type="text" name="q19" autocomplete="off" placeholder="Your answer"></div>
+<div class="q" data-q="20"><div class="q-title"><span class="num">20</span>A man in a silver sports car ______ into a lady in a big blue truck yesterday. (CRASH)</div><input type="text" name="q20" autocomplete="off" placeholder="Your answer"></div>
+</section>
+<section class="section"><h2>V. Reading cloze</h2><p class="sub">Read the passage and choose the best answer for each blank.</p>
+<div class="passage">You use energy every day. Energy is the ability (21) ______ change. When you ride a bike, you use energy from your body to make the bike move. Your parents use heat energy to change the food (22) ______ raw to cooked.<br><br>Not all energy is used as soon as you get it. Sometimes energy is (23) ______ to be used later. Stored energy can be chemical energy stored in a battery or in your body. It can also be potential energy. Potential energy is based on (24) ______ position of the object. A soccer player standing ready to kick a ball has potential energy.<br><br>Energy of motion is also called kinetic energy. Potential energy converts, or changes into, kinetic energy when the thing or person begins to move. When the soccer player kicks the ball, kinetic energy is at work. Energy often changes forms. When you (25) ______ the light, electricity converts into light. When you eat, chemical energy from your food converts into thermal and mechanical energy that allows you to move and work.</div>
+<div id="cloze"></div>
+</section>
+<section class="section"><h2>VI. Reading comprehension</h2><p class="sub">Read the passage and decide whether the statements are True or False.</p>
+<div class="passage">Flying cars aren’t just science fiction anymore. Terrafugia, based in the United States, is developing a roadable aircraft called the Transition. The vehicle has two seats, four wheels and wings that fold up, so it can be driven like a car. Terrafugia first began to work on the Transition in 2006 and has come closer than anyone to making the flying car a reality. The company uses special tires and glass that are lighter than normal automotive ones, which makes it easier for the vehicle to fly. An owner needs to pass a test and complete 20 hours of flying time to be able to fly the Transition. The Transition can reach around 70 miles per hour (mph) on the road and 115 mph in the air. On the ground, it gets 35 miles per gallon.</div>
+<div id="tf"></div>
+</section>
+<section class="section"><h2>VII. Sentence building</h2><p class="sub">Complete each sentence using the cues. You can change the cues and add other words.</p>
+<div class="q" data-q="31"><div class="q-title"><span class="num">31</span>Overpopulation / bring / many problems / like / crimes / unemployment.</div><input type="text" name="q31" placeholder="Write the complete sentence"></div>
+<div class="q" data-q="32"><div class="q-title"><span class="num">32</span>Modern / means of transport / be / very strange / me.</div><input type="text" name="q32" placeholder="Write the complete sentence"></div>
+<div class="q" data-q="33"><div class="q-title"><span class="num">33</span>Like / any / other type / power, / solar energy / have / own / disadvantage.</div><input type="text" name="q33" placeholder="Write the complete sentence"></div>
+<div class="q" data-q="34"><div class="q-title"><span class="num">34</span>Animated character / can / animal / tree / or / any household items, / and / they / can / talk / like / human being.</div><input type="text" name="q34" placeholder="Write the complete sentence"></div>
+<div class="q" data-q="35"><div class="q-title"><span class="num">35</span>have / trip / hometown / brother / two days ago.</div><input type="text" name="q35" placeholder="Write the complete sentence"></div>
+</section>
+<section class="section"><h2>VIII. Listening</h2><p class="sub">Listen and complete the text with NO MORE THAN TWO WORDS.</p>
+<div class="passage">Overpopulation is a real problem. It could kill the Earth. Very soon, there will be too many people and not (36) ______.<br><br>There won’t be enough farms to grow food for everyone. We’ll eat all of the fish in the sea. And our pollution will cause more (37) ______. I think we are in a very serious situation.<br><br>I don’t know what the answer is. Our leaders don’t seem too (38) ______. They never see the bigger picture. The world’s population is exploding, and explosions cause great damage.<br><br>More and more people are living longer and longer. We have better (39) ______. Our scientists have found cures to many diseases. There are many reasons. What we really need to do is to think about how overpopulation (40) ______ the Earth.</div>
+<p class="small">Lưu ý: PDF gốc không kèm file âm thanh, vì vậy phần nghe được giữ lại dưới dạng chỗ điền đáp án; cần phát audio riêng khi tổ chức kiểm tra.</p>
+<div id="listening"></div>
+</section>
+<div class="toolbar"><button class="primary" type="button" id="submitBtn">Nộp bài & xem kết quả</button><button class="quiet" type="button" id="topBtn">Lên đầu trang ↑</button></div>
+<div id="result" aria-live="polite"></div>
+</form>
+</main><footer>English 7 · Global Success · Practice test</footer>
+<script>
+const questions = [
+[5,"Good living standard helps people to ______ healthy and to live longer.",["A. live","B. stay","C. take","D. make"]],
+[6,"______ youngest boy has just started going to ______ school.",["A. The – Ø","B. a – Ø","C. Ø – the","D. an – Ø"]],
+[7,"Have you got ______ pen, or would you like to borrow ______?",["A. your – mine","B. yours – my","C. yours – mine","D. your – my"]],
+[8,"What will our transport ______ look like in the future?",["A. system","B. benefit","C. problem","D. part"]],
+[9,"Emissions from vehicles have negative ______ on the environment.",["A. tasks","B. effects","C. benefits","D. problems"]],
+[10,"The teacher is ______ a talk about how to save energy.",["A. doing","B. taking","C. giving","D. making"]],
+[11,"The festival is ______ every year at the end of October.",["A. taken","B. held","C. made","D. done"]],
+[12,"We adore winter ______ the cold.",["A. in spite of","B. although","C. however","D. but"]],
+[13,"That horror film is too ______ for me.",["A. hilarious","B. frightening","C. romantic","D. moving"]],
+[14,"Let’s ______ a look at the film section of the paper.",["A. do","B. use","C. spend","D. take"]],
+[15,"They often choose ______ cars with bigger engines to get higher speed.",["A. slower","B. faster","C. smaller","D. worse"]]
+];
+const mcq = document.getElementById('mcq');
+questions.forEach(([n,q,opts])=>{const d=document.createElement('div');d.className='q';d.dataset.q=n;d.innerHTML=`<div class="q-title"><span class="num">${n}</span>${q}</div><div class="options">${opts.map((o,i)=>`<label class="option"><input type="radio" name="q${n}" value="${'ABCD'[i]}"> ${o}</label>`).join('')}</div>`;mcq.appendChild(d)});
+const cloze = [
+[21,"A. cause","B. to cause","C. causing","D. caused"],
+[22,"A. from","B. in","C. with","D. by"],
+[23,"A. saved","B. kept","C. stored","D. made"],
+[24,"A. the","B. a","C. an","D. Ø"],
+[25,"A. switch off","B. switch over","C. switch back","D. switch on"]
+];
+cloze.forEach(([n,...opts])=>{const d=document.createElement('div');d.className='q';d.dataset.q=n;d.innerHTML=`<div class="q-title"><span class="num">${n}</span>Choose the best answer.</div><div class="options">${opts.map((o,i)=>`<label class="option"><input type="radio" name="q${n}" value="${'ABCD'[i]}"> ${o}</label>`).join('')}</div>`;document.getElementById('cloze').appendChild(d)});
+const tfs = [
+[26,"The Transition has room for four passengers."],
+[27,"Terrafugia has worked on the Transition since 2006."],
+[28,"The flying car uses special tires and glass."],
+[29,"All drivers of the Transition will only have to pass a test to get a license."],
+[30,"The Transition will go faster in the air than on the road."]
+];
+tfs.forEach(([n,q])=>{const d=document.createElement('div');d.className='q';d.dataset.q=n;d.innerHTML=`<div class="q-title"><span class="num">${n}</span>${q}</div><div class="tf"><label><input type="radio" name="q${n}" value="T"> True</label><label><input type="radio" name="q${n}" value="F"> False</label></div>`;document.getElementById('tf').appendChild(d)});
+for(let n=36;n<=40;n++){const d=document.createElement('div');d.className='q';d.dataset.q=n;d.innerHTML=`<div class="q-title"><span class="num">${n}</span>Complete the missing words (no more than two words).</div><input type="text" name="q${n}" placeholder="Your answer">`;document.getElementById('listening').appendChild(d)}
+const answers={1:"D",2:"B",3:"D",4:"B",5:"B",6:"A",7:"A",8:"A",9:"B",10:"C",11:"B",12:"A",13:"B",14:"D",15:"B",16:"living",17:"regular",18:"replaced",19:"performers",20:"crashed",21:"B",22:"A",23:"C",24:"A",25:"D",26:"F",27:"T",28:"T",29:"F",30:"T"};
+const accepted={
+31:["overpopulation brings many problems like crimes and unemployment","overpopulation brings many problems such as crimes and unemployment"],
+32:["modern means of transport are very strange to me","modern means of transport are very strange for me"],
+33:["like any other type of power solar energy has its own disadvantages","like any other type of power solar energy has its own disadvantage"],
+34:["animated characters can be animals trees or any household items and they can talk like human beings","animated characters can be animals trees or any household item and they can talk like human beings"],
+35:["my brother had a trip to his hometown two days ago","my brother went on a trip to his hometown two days ago","my brother took a trip to his hometown two days ago"],
+36:["enough food","enough food to eat"],
+37:["problems"],
+38:["worried"],
+39:["health care","healthcare","medical care"],
+40:["affects","will affect","is affecting"]
+};
+const total=40;
+function val(n){const els=[...document.querySelectorAll(`[name="q${n}"]`)];if(!els.length)return "";if(els[0].type==="radio")return (els.find(e=>e.checked)||{}).value||"";return els[0].value.trim()}
+function normalize(s){return s.toLowerCase().trim().replace(/[.,!?;:]/g,'').replace(/\s+/g,' ')}
+function updateProgress(){let done=0;for(let n=1;n<=total;n++)if(val(n))done++;document.getElementById('progress').style.width=(done/total*100)+'%';document.getElementById('progressText').textContent=`Đã hoàn thành ${done}/${total} câu`}
+document.getElementById('quiz').addEventListener('input',updateProgress);
+document.getElementById('quiz').addEventListener('change',updateProgress);
+document.getElementById('submitBtn').addEventListener('click',()=>{
+ let auto=0,checked=0,open=0;const details=[];
+ for(let n=1;n<=total;n++){
+  const answer=val(n);const d=document.querySelector(`[data-q="${n}"]`);let status='',explain='',keyText='';
+  if(answer)checked++;
+  let isAutoCorrect=false;
+  if(Object.prototype.hasOwnProperty.call(answers,n)){
+   keyText=answers[n];
+   if(!answer){status='unanswered';explain='Chưa trả lời';}
+   else if(normalize(answer)===normalize(answers[n])){status='correct';auto++;isAutoCorrect=true;explain='Đúng';}
+   else {status='incorrect';explain='Chưa đúng';}
+  } else if(Object.prototype.hasOwnProperty.call(accepted,n)){
+   keyText=accepted[n][0];
+   if(!answer){status='unanswered';explain='Chưa trả lời';}
+   else if(accepted[n].some(a=>normalize(answer)===normalize(a))){status='correct';auto++;isAutoCorrect=true;explain='Đúng';}
+   else {status='incorrect';explain='Chưa đúng — đáp án tham khảo: '+keyText;}
+  } else {
+   open++;status='unanswered';explain='Cần giáo viên chấm';
+  }
+  let fb=d.querySelector('.feedback');if(!fb){fb=document.createElement('div');fb.className='feedback';d.appendChild(fb)}
+  fb.className='feedback '+status;
+  fb.textContent=explain+(keyText && !isAutoCorrect && Object.prototype.hasOwnProperty.call(answers,n)?' · Đáp án: '+keyText:'');
+  details.push({n,answer,status});
+ }
+ const result=document.getElementById('result');result.style.display='block';
+ const grade10=(auto/40*10);
+ result.innerHTML=`<div class="small">KẾT QUẢ</div><div class="score">${grade10.toFixed(2).replace(/\\.00$/,'')}/10 điểm</div><p>Bạn đã trả lời ${checked}/40 câu và đúng ${auto}/40 câu theo đáp án được thiết lập.</p><p class="small">Điểm được quy đổi theo công thức: số câu đúng / 40 × 10. Đáp án câu 31–40 là đáp án tham khảo và có thể cần giáo viên xem lại nếu học sinh diễn đạt tương đương. Phần Listening chưa có audio trong PDF, nên cần phát audio riêng khi làm bài.</p>`;
+ result.scrollIntoView({behavior:'smooth',block:'center'});
+});
+document.getElementById('resetBtn').addEventListener('click',()=>{document.getElementById('quiz').reset();document.querySelectorAll('.feedback').forEach(e=>e.remove());document.getElementById('result').style.display='none';updateProgress();window.scrollTo({top:0,behavior:'smooth'})});
+document.getElementById('reviewBtn').addEventListener('click',()=>{const unanswered=[...document.querySelectorAll('.q')].filter(d=>!val(Number(d.dataset.q)));if(!unanswered.length){alert('Bạn đã nhập câu trả lời cho tất cả câu hỏi!');return}unanswered[0].scrollIntoView({behavior:'smooth',block:'center'});unanswered.forEach(d=>d.style.outline='2px solid #f59e0b');setTimeout(()=>unanswered.forEach(d=>d.style.outline=''),2200)});
+document.getElementById('topBtn').addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+updateProgress();
+</script>
 </body>
 </html>
