@@ -3,98 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Present Simple | Grade 8 Practice</title>
+<title>English Midterm Test - Grade 4</title>
 <style>
-:root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#64748b;--brand:#5b5ce2;--brand2:#8b5cf6;--line:#e2e8f0;--good:#15803d;--bad:#b91c1c}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
-header{background:linear-gradient(120deg,#3438a8,#7c3aed);color:#fff;padding:34px 20px 28px}.hero{max-width:900px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;opacity:.85}
-h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;margin:.55rem 0}.hero p{margin:.5rem 0 0;opacity:.92}
-main{max-width:900px;margin:24px auto;padding:0 16px 50px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:16px}
+:root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#64748b;--brand:#4f46e5;--brand2:#7c3aed;--line:#e2e8f0;--good:#15803d;--bad:#b91c1c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+header{background:linear-gradient(120deg,#3730a3,#7c3aed);color:#fff;padding:32px 20px}
+.hero,main{max-width:920px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;opacity:.85}
+h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.2;margin:.5rem 0}
+header p{margin:.35rem 0;opacity:.95}
+main{padding:22px 16px 50px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-bottom:16px}
 .pill{background:#e8eaff;color:#3730a3;padding:7px 12px;border-radius:999px;font-size:.88rem;font-weight:700}
-button{font:inherit;border:0;border-radius:12px;padding:11px 16px;cursor:pointer;font-weight:750;transition:.15s}button:hover{transform:translateY(-1px)}
+button{font:inherit;border:0;border-radius:11px;padding:10px 15px;cursor:pointer;font-weight:750}
 .primary{background:var(--brand);color:#fff}.secondary{background:#eef2ff;color:#3730a3}.quiet{background:#fff;border:1px solid var(--line);color:var(--ink)}
-.progress-wrap{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin:12px 0 8px}.progress{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--brand2));transition:width .2s}
-.section{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:16px 0;box-shadow:0 6px 22px #17203308}.section h2{margin:0 0 5px;font-size:1.2rem}
-.sub{color:var(--muted);font-size:.92rem;margin:0 0 18px}.q{padding:16px 0;border-top:1px solid var(--line)}.q:first-of-type{border-top:0}
-.q-title{font-weight:700;margin-bottom:10px}.num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#eef2ff;color:#4338ca;margin-right:8px;font-size:.85rem}
-input[type=text]{width:100%;max-width:480px;border:1px solid #cbd5e1;border-radius:10px;padding:11px 12px;font:inherit}input[type=text]:focus{outline:2px solid #a5b4fc;border-color:#818cf8}
-.feedback{font-size:.9rem;margin-top:7px;font-weight:700}.correct{color:var(--good)}.incorrect{color:var(--bad)}.unanswered{color:#a16207}
-#result{display:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 12px 35px #0f172a12;margin-top:20px}
-.score{font-size:1.8rem;font-weight:850;color:#4338ca}.small{color:var(--muted);font-size:.88rem}footer{text-align:center;color:var(--muted);padding:20px;font-size:.85rem}
-@media(max-width:600px){.section{padding:16px}.toolbar{align-items:stretch}.toolbar button{flex:1}}
+.section{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:22px;margin:16px 0;box-shadow:0 6px 22px #17203308}
+.section h2{margin:0 0 4px;font-size:1.2rem}.sub{color:var(--muted);font-size:.93rem;margin:0 0 16px}
+.q{padding:13px 0;border-top:1px solid var(--line)}.q:first-of-type{border-top:0}
+.q-title{font-weight:650;margin-bottom:8px}.num{display:inline-grid;place-items:center;min-width:27px;height:27px;padding:0 5px;border-radius:8px;background:#eef2ff;color:#4338ca;margin-right:7px;font-size:.85rem}
+input[type=text],select{width:100%;max-width:440px;border:1px solid #cbd5e1;border-radius:9px;padding:9px 11px;font:inherit;background:#fff}
+input:focus,select:focus{outline:2px solid #a5b4fc;border-color:#818cf8}
+.options{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0}.options label{display:flex;gap:6px;align-items:center}
+.match-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,240px);gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.reading{background:#f8fafc;border-radius:12px;padding:15px;margin:10px 0 14px}
+.feedback{font-size:.9rem;margin-top:6px;font-weight:700}.correct{color:var(--good)}.incorrect{color:var(--bad)}.unanswered{color:#a16207}
+#result{display:none;background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;margin-top:18px}
+.score{font-size:1.8rem;font-weight:850;color:#4338ca}.small{font-size:.88rem;color:var(--muted)}
+.progress-wrap{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;margin:10px 0}.progress{height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+footer{text-align:center;color:var(--muted);padding:20px;font-size:.85rem}
+@media(max-width:600px){.section{padding:15px}.match-row{grid-template-columns:1fr}.toolbar{align-items:stretch}.toolbar button{flex:1}}
+@media print{body{background:#fff}header{background:#fff;color:#111;padding:12px 0}.section{box-shadow:none;break-inside:avoid}.toolbar,#result,.progress-wrap,#progressText,footer button{display:none!important}main{padding:0}.section{border:1px solid #bbb}}
 </style>
 </head>
 <body>
 <header><div class="hero">
-<div class="eyebrow">ENGLISH GRAMMAR · GRADE 8</div>
-<h1>Present Simple Tense<br>Thì hiện tại đơn</h1>
-<p>Bài luyện tập chia động từ · Câu khẳng định và câu phủ định</p>
+<div class="eyebrow">ENGLISH · GRADE 4 · GLOBAL SUCCESS</div>
+<h1>MIDTERM TEST – UNITS 1–5</h1>
+<p>Đề kiểm tra giữa kì môn Tiếng Anh lớp 4</p>
+<p>Họ và tên: __________________________________ &nbsp; Lớp: __________</p>
 </div></header>
 <main>
-<div class="toolbar"><span class="pill">20 câu · Điểm tối đa: 10</span><div><button class="quiet" id="resetBtn" type="button">Làm lại</button> <button class="secondary" id="reviewBtn" type="button">Xem câu chưa làm</button></div></div>
+<div class="toolbar"><span class="pill">Units 1–5 · Có đáp án tự chấm</span><div><button class="quiet" type="button" onclick="window.print()">In đề</button> <button class="quiet" id="resetBtn" type="button">Làm lại</button></div></div>
 <div class="progress-wrap"><div class="progress" id="progress"></div></div>
-<p class="small" id="progressText">Đã hoàn thành 0/20 câu</p>
-<form id="quiz">
-<section class="section">
-<h2>I. Câu khẳng định (Affirmative)</h2><p class="sub">Chia động từ trong ngoặc ở thì hiện tại đơn.</p>
-<div class="q" data-q="1"><div class="q-title"><span class="num">1</span>I usually ______ (get) up at 6 o'clock.</div><input type="text" name="q1" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="2"><div class="q-title"><span class="num">2</span>She ______ (go) to school every day.</div><input type="text" name="q2" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="3"><div class="q-title"><span class="num">3</span>They ______ (play) football after school.</div><input type="text" name="q3" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="4"><div class="q-title"><span class="num">4</span>My brother ______ (watch) TV every evening.</div><input type="text" name="q4" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="5"><div class="q-title"><span class="num">5</span>We ______ (have) English lessons on Monday.</div><input type="text" name="q5" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="6"><div class="q-title"><span class="num">6</span>He ______ (do) his homework after dinner.</div><input type="text" name="q6" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="7"><div class="q-title"><span class="num">7</span>The sun ______ (rise) in the east.</div><input type="text" name="q7" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="8"><div class="q-title"><span class="num">8</span>Water ______ (boil) at 100°C.</div><input type="text" name="q8" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="9"><div class="q-title"><span class="num">9</span>The Earth ______ (go) around the Sun.</div><input type="text" name="q9" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="10"><div class="q-title"><span class="num">10</span>Fish ______ (live) in water.</div><input type="text" name="q10" autocomplete="off" placeholder="Your answer"></div>
+<p class="small" id="progressText">Đã hoàn thành 0 câu</p>
+<form id="test">
+<section class="section" id="vocab">
+<h2>I. VOCABULARY – TỪ VỰNG (3 điểm)</h2>
+<p class="sub">Write the English words. Viết từ tiếng Anh tương ứng với nghĩa tiếng Việt. Mỗi câu 0,1 điểm.</p>
+<div id="vocabQuestions"></div>
 </section>
-<section class="section">
-<h2>II. Câu phủ định (Negative)</h2><p class="sub">Viết dạng phủ định đúng. Có thể dùng dạng đầy đủ hoặc dạng rút gọn: do not/don't, does not/doesn't.</p>
-<div class="q" data-q="11"><div class="q-title"><span class="num">11</span>I ______ (not / like) coffee.</div><input type="text" name="q11" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="12"><div class="q-title"><span class="num">12</span>She ______ (not / play) badminton every day.</div><input type="text" name="q12" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="13"><div class="q-title"><span class="num">13</span>They ______ (not / go) to school on Sundays.</div><input type="text" name="q13" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="14"><div class="q-title"><span class="num">14</span>He ______ (not / watch) TV in the morning.</div><input type="text" name="q14" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="15"><div class="q-title"><span class="num">15</span>We ______ (not / eat) fast food every day.</div><input type="text" name="q15" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="16"><div class="q-title"><span class="num">16</span>My father ______ (not / work) on Sundays.</div><input type="text" name="q16" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="17"><div class="q-title"><span class="num">17</span>The Sun ______ (not / move) around the Earth.</div><input type="text" name="q17" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="18"><div class="q-title"><span class="num">18</span>Plants ______ (not / grow) without water.</div><input type="text" name="q18" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="19"><div class="q-title"><span class="num">19</span>Fish ______ (not / live) on land.</div><input type="text" name="q19" autocomplete="off" placeholder="Your answer"></div>
-<div class="q" data-q="20"><div class="q-title"><span class="num">20</span>The Moon ______ (not / produce) its own light.</div><input type="text" name="q20" autocomplete="off" placeholder="Your answer"></div>
+
+<section class="section" id="listening">
+<h2>II. LISTENING – NGHE (1 điểm)</h2>
+<p class="sub">Listen and complete the sentences. Nghe audio bên dưới và điền từ còn thiếu. Mỗi câu 0,25 điểm.</p>
+<audio controls preload="metadata" style="display:block;width:100%;max-width:520px;margin:0 0 16px">
+<source src="1728638203597-5-de-5-bai-nghe.mp3" type="audio/mpeg">
+Trình duyệt của bạn không hỗ trợ phát audio. <a href="1728638203597-5-de-5-bai-nghe.mp3">Tải file nghe</a>.
+</audio>
+<div class="q" data-id="l1"><div class="q-title"><span class="num">1</span>Class starts at ______ o’clock.</div><input type="text" name="l1" placeholder="Your answer"></div>
+<div class="q" data-id="l2"><div class="q-title"><span class="num">2</span>Quang ______ on Wednesdays.</div><input type="text" name="l2" placeholder="Your answer"></div>
+<div class="q" data-id="l3"><div class="q-title"><span class="num">3</span>Lucy can ______.</div><input type="text" name="l3" placeholder="Your answer"></div>
+<div class="q" data-id="l4"><div class="q-title"><span class="num">4</span>I ______ on Sundays.</div><input type="text" name="l4" placeholder="Your answer"></div>
+<p class="small">Lưu ý: Đáp án câu 2–4 phụ thuộc vào phần audio tương ứng; giáo viên nhập đáp án chính xác vào mã chấm bài nếu muốn chấm tự động.</p>
 </section>
-<div class="toolbar"><button class="primary" type="button" id="submitBtn">Nộp bài & xem kết quả</button><button class="quiet" type="button" id="topBtn">Lên đầu trang ↑</button></div>
+
+<section class="section" id="grammar">
+<h2>III. GRAMMAR AND VOCABULARY – NGỮ PHÁP (1,5 điểm)</h2>
+<p class="sub">Circle the correct answer. Khoanh tròn đáp án đúng. Mỗi câu 0,3 điểm.</p>
+<div class="q" data-id="g1"><div class="q-title"><span class="num">1</span>Hello. I’m Mai. I’m from ______.</div><div class="options"><label><input type="radio" name="g1" value="A"> A. Japanese</label><label><input type="radio" name="g1" value="B"> B. America</label><label><input type="radio" name="g1" value="C"> C. Vietnam</label><label><input type="radio" name="g1" value="D"> D. Malaysian</label></div></div>
+<div class="q" data-id="g2"><div class="q-title"><span class="num">2</span>We have many ______ in Da Nang.</div><div class="options"><label><input type="radio" name="g2" value="A"> A. friend</label><label><input type="radio" name="g2" value="B"> B. from</label><label><input type="radio" name="g2" value="C"> C. friends</label><label><input type="radio" name="g2" value="D"> D. country</label></div></div>
+<div class="q" data-id="g3"><div class="q-title"><span class="num">3</span>I have English ______ Tuesday.</div><div class="options"><label><input type="radio" name="g3" value="A"> A. in</label><label><input type="radio" name="g3" value="B"> B. on</label><label><input type="radio" name="g3" value="C"> C. from</label><label><input type="radio" name="g3" value="D"> D. to</label></div></div>
+<div class="q" data-id="g4"><div class="q-title"><span class="num">4</span>I fly kites with my friends ______ the afternoon.</div><div class="options"><label><input type="radio" name="g4" value="A"> A. in</label><label><input type="radio" name="g4" value="B"> B. to</label><label><input type="radio" name="g4" value="C"> C. at</label><label><input type="radio" name="g4" value="D"> D. on</label></div></div>
+<div class="q" data-id="g5"><div class="q-title"><span class="num">5</span>Linda ______ from England.</div><div class="options"><label><input type="radio" name="g5" value="A"> A. are</label><label><input type="radio" name="g5" value="B"> B. is</label><label><input type="radio" name="g5" value="C"> C. am</label><label><input type="radio" name="g5" value="D"> D. at</label></div></div>
+</section>
+
+<section class="section" id="matching">
+<h2>IV. READING – MATCHING (1,5 điểm)</h2>
+<p class="sub">Match the questions with the answers. Nối câu hỏi với câu trả lời đúng. Mỗi câu 0,3 điểm.</p>
+<div class="q"><div class="match-row"><span><b>1.</b> What day is it today?</span><select name="m1"><option value="">Choose an answer</option><option value="a">a. It’s the sixteenth of August.</option><option value="b">b. I visit my grandparents.</option><option value="c">c. It’s on Wednesday.</option><option value="d">d. We have English.</option><option value="e">e. It’s Sunday.</option></select></div>
+<div class="match-row"><span><b>2.</b> What do you do on Sunday morning?</span><select name="m2"><option value="">Choose an answer</option><option value="a">a. It’s the sixteenth of August.</option><option value="b">b. I visit my grandparents.</option><option value="c">c. It’s on Wednesday.</option><option value="d">d. We have English.</option><option value="e">e. It’s Sunday.</option></select></div>
+<div class="match-row"><span><b>3.</b> What do we have on Fridays?</span><select name="m3"><option value="">Choose an answer</option><option value="a">a. It’s the sixteenth of August.</option><option value="b">b. I visit my grandparents.</option><option value="c">c. It’s on Wednesday.</option><option value="d">d. We have English.</option><option value="e">e. It’s Sunday.</option></select></div>
+<div class="match-row"><span><b>4.</b> What is the date today?</span><select name="m4"><option value="">Choose an answer</option><option value="a">a. It’s the sixteenth of August.</option><option value="b">b. I visit my grandparents.</option><option value="c">c. It’s on Wednesday.</option><option value="d">d. We have English.</option><option value="e">e. It’s Sunday.</option></select></div>
+<div class="match-row"><span><b>5.</b> When is the next English class?</span><select name="m5"><option value="">Choose an answer</option><option value="a">a. It’s the sixteenth of August.</option><option value="b">b. I visit my grandparents.</option><option value="c">c. It’s on Wednesday.</option><option value="d">d. We have English.</option><option value="e">e. It’s Sunday.</option></select></div></div>
+</section>
+
+<section class="section" id="reading">
+<h2>V. READING – ĐỌC HIỂU (1 điểm)</h2>
+<p class="sub">Read and choose True (T) or False (F). Đọc đoạn văn và chọn Đúng (T) hoặc Sai (F). Mỗi câu 0,25 điểm.</p>
+<div class="reading">Hello! My name is Nam. I am from Vietnam. My birthday is in May. I have English on Mondays and Wednesdays. On Sunday morning, I visit my grandparents. In the afternoon, I fly kites with my friends.</div>
+<div class="q" data-id="r1"><div class="q-title"><span class="num">1</span>Nam is from Vietnam.</div><div class="options"><label><input type="radio" name="r1" value="T"> True</label><label><input type="radio" name="r1" value="F"> False</label></div></div>
+<div class="q" data-id="r2"><div class="q-title"><span class="num">2</span>Nam’s birthday is in March.</div><div class="options"><label><input type="radio" name="r2" value="T"> True</label><label><input type="radio" name="r2" value="F"> False</label></div></div>
+<div class="q" data-id="r3"><div class="q-title"><span class="num">3</span>Nam has English on Mondays and Wednesdays.</div><div class="options"><label><input type="radio" name="r3" value="T"> True</label><label><input type="radio" name="r3" value="F"> False</label></div></div>
+<div class="q" data-id="r4"><div class="q-title"><span class="num">4</span>Nam flies kites in the afternoon on Sunday.</div><div class="options"><label><input type="radio" name="r4" value="T"> True</label><label><input type="radio" name="r4" value="F"> False</label></div></div>
+</section>
+
+<section class="section" id="writing">
+<h2>VI. WRITING – VIẾT CÂU (2 điểm)</h2>
+<p class="sub">Reorder the words to make correct sentences. Sắp xếp từ thành câu hoàn chỉnh. Mỗi câu 0,5 điểm.</p>
+<div class="q" data-id="w1"><div class="q-title"><span class="num">1</span>from / I / Vietnam / am</div><input type="text" name="w1" placeholder="Write the sentence"></div>
+<div class="q" data-id="w2"><div class="q-title"><span class="num">2</span>English / have / on / We / Tuesday</div><input type="text" name="w2" placeholder="Write the sentence"></div>
+<div class="q" data-id="w3"><div class="q-title"><span class="num">3</span>birthday / is / My / in / May</div><input type="text" name="w3" placeholder="Write the sentence"></div>
+<div class="q" data-id="w4"><div class="q-title"><span class="num">4</span>kites / fly / I / Sunday / on</div><input type="text" name="w4" placeholder="Write the sentence"></div>
+</section>
+
+<div class="toolbar"><button class="primary" type="button" id="submitBtn">Nộp bài & xem kết quả</button><button class="quiet" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">Lên đầu trang ↑</button></div>
 <div id="result" aria-live="polite"></div>
 </form>
 </main>
-<footer>Present Simple · English Grammar Practice</footer>
+<footer>English Midterm Test · Grade 4 · Global Success</footer>
 <script>
-const answers = {
-1:["get"],2:["goes"],3:["play"],4:["watches"],5:["have"],6:["does"],7:["rises"],8:["boils"],9:["goes"],10:["live"],
-11:["do not like","don't like"],12:["does not play","doesn't play"],13:["do not go","don't go"],14:["does not watch","doesn't watch"],
-15:["do not eat","don't eat"],16:["does not work","doesn't work"],17:["does not move","doesn't move"],18:["do not grow","don't grow"],
-19:["do not live","don't live"],20:["does not produce","doesn't produce"]
-};
-const total=20;
-function val(n){const el=document.querySelector(`[name="q${n}"]`);return el?el.value.trim():""}
-function normalize(s){return s.toLowerCase().trim().replace(/[.,!?;:]/g,"").replace(/\s+/g," ").replace(/[’‘]/g,"'")}
-function updateProgress(){let done=0;for(let n=1;n<=total;n++)if(val(n))done++;document.getElementById("progress").style.width=(done/total*100)+"%";document.getElementById("progressText").textContent=`Đã hoàn thành ${done}/${total} câu`}
-document.getElementById("quiz").addEventListener("input",updateProgress);
-document.getElementById("submitBtn").addEventListener("click",()=>{
-let correct=0,done=0;
-for(let n=1;n<=total;n++){
-const answer=normalize(val(n));if(answer)done++;
-const isCorrect=answers[n].map(normalize).includes(answer);if(isCorrect)correct++;
-const q=document.querySelector(`[data-q="${n}"]`);let fb=q.querySelector(".feedback");
-if(!fb){fb=document.createElement("div");fb.className="feedback";q.appendChild(fb)}
-fb.className="feedback "+(isCorrect?"correct":answer?"incorrect":"unanswered");
-fb.textContent=isCorrect?"Chính xác!":(answer?"Chưa đúng. Đáp án: "+answers[n][0]:"Chưa trả lời. Đáp án: "+answers[n][0]);
-}
-const result=document.getElementById("result");result.style.display="block";const score=correct/total*10;
-result.innerHTML=`<div class="small">KẾT QUẢ</div><div class="score">${Number(score.toFixed(2))}/10 điểm</div><p>Bạn đã trả lời ${done}/20 câu và đúng ${correct}/20 câu.</p><p class="small">Điểm được tính theo công thức: số câu đúng / 20 × 10.</p>`;
-result.scrollIntoView({behavior:"smooth",block:"center"});
+const vocab = [
+["Bạn bè","friends"],["Sinh nhật","birthday"],["Bơi","swim"],["Nhảy múa","dance"],["Việt Nam","vietnam"],["Tiếng Anh","english"],["Đất nước","country"],["Thứ Hai","monday"],["Thứ Ba","tuesday"],["Thứ Tư","wednesday"],["Thứ Sáu","friday"],["Chủ nhật","sunday"],["Buổi sáng","morning"],["Buổi chiều","afternoon"],["Buổi tối","evening"],["Thức dậy","get up"],["Đi ngủ","go to bed"],["Tháng Một","january"],["Tháng Hai","february"],["Tháng Ba","march"],["Tháng Tư","april"],["Tháng Năm","may"],["Tháng Sáu","june"],["Tháng Bảy","july"],["Tháng Tám","august"],["Tháng Chín","september"],["Tháng Mười","october"],["Tháng Mười một","november"],["Tháng Mười hai","december"],["Chơi bóng đá","play football"],["Chơi thả diều","fly kites"]
+];
+const vocabBox=document.getElementById("vocabQuestions");
+vocab.forEach((item,i)=>{const d=document.createElement("div");d.className="q";d.dataset.id="v"+(i+1);d.innerHTML=`<div class="q-title"><span class="num">${i+1}</span>${item[0]}:</div><input type="text" name="v${i+1}" autocomplete="off" placeholder="Write the English word">`;vocabBox.appendChild(d)});
+const answers={};
+vocab.forEach((x,i)=>answers["v"+(i+1)]=[x[1]]);
+Object.assign(answers,{
+l1:["eight","8"],l2:[],l3:[],l4:[],
+g1:["C"],g2:["C"],g3:["B"],g4:["A"],g5:["B"],
+m1:["e"],m2:["b"],m3:["d"],m4:["a"],m5:["c"],
+r1:["T"],r2:["F"],r3:["T"],r4:["T"],
+w1:["i am from vietnam"],w2:["we have english on tuesday"],w3:["my birthday is in may"],w4:["i fly kites on sunday"]
 });
-document.getElementById("resetBtn").addEventListener("click",()=>{document.getElementById("quiz").reset();document.querySelectorAll(".feedback").forEach(e=>e.remove());document.getElementById("result").style.display="none";updateProgress();window.scrollTo({top:0,behavior:"smooth"})});
-document.getElementById("reviewBtn").addEventListener("click",()=>{const unanswered=[...document.querySelectorAll(".q")].filter(d=>!val(Number(d.dataset.q)));if(!unanswered.length){alert("Bạn đã trả lời tất cả câu hỏi!");return}unanswered.forEach(d=>d.style.outline="2px solid #f59e0b");unanswered[0].scrollIntoView({behavior:"smooth",block:"center"});setTimeout(()=>unanswered.forEach(d=>d.style.outline=""),2200)});
-document.getElementById("topBtn").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+const totalAuto=31+1+5+5+4+4;
+function norm(s){return s.toLowerCase().trim().replace(/[.,!?;:]/g,"").replace(/[’‘]/g,"'").replace(/\s+/g," ")}
+function getVal(name){const el=document.querySelector(`[name="${name}"]`);if(!el)return "";if(el.type==="radio"){const checked=document.querySelector(`[name="${name}"]:checked`);return checked?checked.value:""}return el.value.trim()}
+function updateProgress(){const fields=[...document.querySelectorAll("#test input, #test select")].filter(el=>el.type!=="radio");let done=fields.filter(el=>el.value.trim()).length;const radioNames=[...new Set([...document.querySelectorAll('#test input[type="radio"]')].map(el=>el.name))];done+=radioNames.filter(n=>getVal(n)).length;const total=fields.length+radioNames.length;document.getElementById("progress").style.width=(done/total*100)+"%";document.getElementById("progressText").textContent=`Đã hoàn thành ${done}/${total} ô trả lời`}
+document.getElementById("test").addEventListener("input",updateProgress);
+document.getElementById("test").addEventListener("change",updateProgress);
+document.getElementById("submitBtn").addEventListener("click",()=>{
+ let correct=0,gradable=0,done=0;
+ Object.keys(answers).forEach(name=>{
+   const q=document.querySelector(`[data-id="${name}"]`);if(!q)return;
+   const raw=getVal(name);if(raw)done++;
+   const accepted=answers[name];
+   if(!accepted.length)return; // Listening answers 2-4 depend on the supplied audio.
+   gradable++;
+   const ok=accepted.map(norm).includes(norm(raw));if(ok)correct++;
+   let fb=q.querySelector(".feedback");if(!fb){fb=document.createElement("div");fb.className="feedback";q.appendChild(fb)}
+   fb.className="feedback "+(ok?"correct":raw?"incorrect":"unanswered");
+   fb.textContent=ok?"Chính xác!":(raw?"Chưa đúng. Đáp án: "+accepted[0]:"Chưa trả lời. Đáp án: "+accepted[0]);
+ });
+ const result=document.getElementById("result");result.style.display="block";
+ result.innerHTML=`<div class="small">KẾT QUẢ TỰ CHẤM</div><div class="score">${(correct/gradable*10).toFixed(2)}/10 điểm</div><p>Đúng ${correct}/${gradable} câu có đáp án thiết lập sẵn.</p><p class="small">Các câu nghe 2–4 không được tính tự động vì đáp án phụ thuộc audio. Giáo viên cần kiểm tra thủ công.</p>`;
+ result.scrollIntoView({behavior:"smooth",block:"center"});
+});
+document.getElementById("resetBtn").addEventListener("click",()=>{document.getElementById("test").reset();document.querySelectorAll(".feedback").forEach(e=>e.remove());document.getElementById("result").style.display="none";updateProgress();window.scrollTo({top:0,behavior:"smooth"})});
 updateProgress();
 </script>
 </body>
